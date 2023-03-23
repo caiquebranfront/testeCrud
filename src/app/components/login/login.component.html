@@ -1,0 +1,17 @@
+<div class="p-grid p-justify-center">
+  <div class="p-col-10 p-md-6 p-lg-4">
+    <div class="card">
+      <h2>Login</h2>
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <app-input name="email" label="E-mail" [(ngModel)]="email"></app-input>
+        <app-input
+          name="password"
+          label="Senha"
+          type="password"
+          [(ngModel)]="password"
+        ></app-input>
+        <app-button label="Entrar" [disabled]="!loginForm.valid"></app-button>
+      </form>
+    </div>
+  </div>
+</div>
